@@ -14,6 +14,6 @@ The script implements the modeling procedure in the following steps:<br>
 >5) Splitting the dataset into calibration and validation sets<br>
 >6) Preprocessing spectra using five different methods (Savitzky-Golay smoothening, Standard Normal Variate, Multiplicative Scatter Correction, Detrend Normalization, and Continuum Removal) <br>
 >8) Modeling and prediction procedures condensed in a FOR loop for each individual element in the dataset<br>
->9) Combining the results in csv tables<br>
+>9) Combining the evaluation results in csv tables<br>
 
 The outputs of the script are figures of the predicted versus observed values, tables of calibration results and validation results for each individual prediction and two tables containing all of the calibration and validation results for all predictions. All models are stored as .rda files (R objects) and can be loaded afterwards.
