@@ -2,7 +2,7 @@
 
 The measurement of elemental concentrations in soil is an expensive and hazardous process. Near-infrared (NIR) spectroscopy is an alternative analytical method which can be implemented based on calibration models for prediction. For such, Random Forest (RF) machine learning model can be used.
 
-I bring here my own R script for prediction of soil elemental concentrations from NIR spectra using RF, followed by an example dataset and the outputs of the script.
+I bring here my own R script for prediction of soil elemental concentrations from NIR spectra using RF, followed by an example dataset containing 178 samples with Al, Fe, Mn, Ti, Th and V concentrations, and the outputs of the script.
 
 The dataset must contain columns of samples id, known elemental concentrations measured by standard methods (for calibration), and the reflectance values for each individual wavelength (spectra). Any column containing sample information must be located between sample id and the first column of elemental concentration.
 
