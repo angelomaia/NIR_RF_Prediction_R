@@ -16,4 +16,4 @@ The script implements the modeling procedure in the following steps:<br>
 >8) Modeling and prediction procedures condensed in a FOR loop for each individual element in the dataset<br>
 >9) Combining the results in csv tables<br>
 
-The outputs of the script are figures of the predicted versus observed values, figures of the variables importance in the prediction, tables of calibration results and validation results for each individual prediction and two tables containing all of the calibration and validation results for all predictions.
+The outputs of the script are figures of the predicted versus observed values, tables of calibration results and validation results for each individual prediction and two tables containing all of the calibration and validation results for all predictions. All models are stored as .rda files (R objects) and can be loaded afterwards.
