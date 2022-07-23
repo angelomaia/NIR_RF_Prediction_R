@@ -4,6 +4,8 @@ The measurement of elemental concentrations in soil is an expensive and hazardou
 
 In this repository I bring my own R script for prediction of soil elemental concentrations from NIR spectra using RF, comprising an example dataset and the outputs of the script.
 
+The dataset must contain columns of samples id, known elemental concentrations measured by standard methods (for calibration), and the reflectance values for each individual wavelength (spectra). Any column containing sample information must be located before the first column of elemental concentration.
+
 The script implements the modeling procedure in the following steps:<br>
 >1) Importing and loading required packages<br>
 >2) Declaring functions and fonts to be used<br>
