@@ -17,3 +17,5 @@ The script implements the modeling procedure in the following steps:<br>
 >9) Combining the evaluation results in csv tables<br>
 
 The outputs of the script are figures of the predicted versus observed values, tables of calibration results and validation results for each individual prediction and two tables containing all of the calibration and validation results for all predictions. All models are stored as .rda files (R objects) and can be loaded afterwards.
+
+Visualizations for the prediction scores can be easily generated, as I show [in this repo](https://github.com/angelomaia/Pred_Scores_Visualization_R).
