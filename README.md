@@ -7,7 +7,7 @@ In this repository I bring my own R script for prediction of soil elemental conc
 The script implements the modeling procedure in the following steps:<br>
 |     Importing and loading required packages<br>
 |     Declaring functions and fonts to be used<br>
-|     Importing the dataset and defining the variables which will be used<br>
+|     Importing the dataset and defining the variables<br>
 |     Cleaning and filtering the dataset<br>
 |     Splitting the dataset into calibration and validation sets<br>
 |     Preprocessing spectra using five different methods (Savitzky-Golay smoothening, Standard Normal Variate, Multiplicative Scatter Correction, Detrend Normalization, and Continuum Removal) <br>
