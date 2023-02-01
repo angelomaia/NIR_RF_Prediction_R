@@ -10,7 +10,7 @@ The script implements the modeling procedure in the following steps:<br>
 |     Importing the dataset and defining the variables<br>
 |     Cleaning and filtering the dataset<br>
 |     Splitting the dataset into calibration and validation sets<br>
-|     Preprocessing spectra using five different methods (Savitzky-Golay smoothening, Standard Normal Variate, Multiplicative Scatter Correction, Detrend Normalization, and Continuum Removal) <br>
+|     Preprocessing spectra using five different methods (Savitzky-Golay derivative, Standard Normal Variate, Multiplicative Scatter Correction, Detrend Normalization, and Continuum Removal) <br>
 |     Modeling and prediction procedures condensed in a FOR loop for each individual element in the dataset<br>
 |     Combining the results in csv tables<br>
 
