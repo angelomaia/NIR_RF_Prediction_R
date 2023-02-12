@@ -15,3 +15,5 @@ The script implements the modeling procedure in the following steps:<br>
 |     Combining the results in csv tables<br>
 
 The outputs of the script are figures of the predicted versus observed values, figures of the variables importance in the prediction, tables of calibration results and validation results for each individual prediction and two tables containing all of the calibration and validation results for all predictions.
+
+You can check out a script to generate prediction scores visualization on [this repository](https://github.com/angelomaia/Pred_Scores_Visualization_R).
