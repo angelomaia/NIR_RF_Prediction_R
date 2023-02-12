@@ -75,6 +75,7 @@ dir.create(paste0(dir, "Tables"))
 dir.create(paste0(dir, "Tables/validation"))
 dir.create(paste0(dir, "Tables/calibration"))
 dir.create(paste0(dir, "figures"))
+dir.create(paste0(dir, "models"))
 
 # Importing dataset and defining variables ----
 db = read.csv(paste0(dir, "dataset.csv"))
@@ -162,6 +163,7 @@ db.val$id_spec = rownames(db.val)
 db.val = db.val %>%
   select('id_spec', everything())
 write.csv(db.val, paste0(dir, " db_val.csv"), row.names = F)
+saveRDS(db.val, paste0(dir, " db_val.Orig.rda"))
 
 ### ------------------ ###
 
@@ -183,7 +185,7 @@ db.train.msc = db.train.msc %>%
 #Merging DFs
 colnames(db.train[, 1:30])
 colnames(db.train.msc[, 1:30])
- 
+
 db.train.msc = cbind(db.train[,1:(j-1)], db.train.msc[,2:length(db.train.msc)])
 head(db.train.msc[, c(1:6, length(db.train.msc))])
 
@@ -204,6 +206,7 @@ colnames(db.val.msc[, 1:30])
 
 db.val.msc = cbind(db.val[,1:(j-1)], db.val.msc[,2:length(db.val.msc)])
 head(db.val.msc[, c(1:6, length(db.val.msc))])
+saveRDS(db.val.msc, paste0(dir, " db_val.MSC.rda"))
 
 ## Savitzky-Golay
 ### Training data
@@ -242,6 +245,7 @@ colnames(db.val[, 1:30])
 colnames(db.val.sg[, 1:30])
 
 db.val.sg = cbind(db.val[,1:(j-1)], db.val.sg[,2:length(db.val.sg)])
+saveRDS(db.val.sg, paste0(dir, " db_val.SG.rda"))
 
 ## Standard Normal Variate
 ### Training data
@@ -280,6 +284,7 @@ colnames(db.val.snv[, 1:30])
 
 db.val.snv = cbind(db.val[,1:(j-1)], db.val.snv[,2:length(db.val.snv)])
 head(db.val.snv[, c(1:6, length(db.val.snv))])
+saveRDS(db.val.snv, paste0(dir, " db_val.SNV.rda"))
 
 ## Detrend normalization
 ### Training data
@@ -319,6 +324,7 @@ colnames(db.val.det[, 1:30])
 
 db.val.det = cbind(db.val[,1:(j-1)], db.val.det[,2:length(db.val.det)])
 head(db.val.det[, c(1:6, length(db.val.det))])
+saveRDS(db.val.det, paste0(dir, " db_val.DET.rda"))
 
 ## Continuum removal
 ### Training data
@@ -364,6 +370,7 @@ colnames(db.val.cr[, 1:30])
 
 db.val.cr = cbind(db.val[,1:(j-1)], db.val.cr[,2:length(db.val.cr)])
 head(db.val.cr[, c(1:6, length(db.val.cr))])
+saveRDS(db.val.cr, paste0(dir, " db_val.CR.rda"))
 
 #_________________________________----
 #
@@ -416,7 +423,6 @@ for (w in i:j){
                                      importance = T))  
   stopCluster(cl)
   
-  dir.create(paste0(dir, "models"))
   saveRDS(Orig.Rf.Model, file = paste0(dir, 'models/', paste(ElementCode, "Orig.Rf.Model.rda", sep=".")))
   
   print(Orig.Rf.Model)
