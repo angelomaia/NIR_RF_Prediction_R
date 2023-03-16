@@ -5,18 +5,18 @@
 ####
 
 # Packages
-require(prospectr)
-require(dplyr)
-require(ggridges)
-require(ggplot2)
-require(tidyr)
-require(ggthemes)
-require(clhs)
-require(doParallel)
-require(caret)
-require(randomForest)
-require(pls)
-require(devtools)
+library(prospectr)
+library(dplyr)
+library(ggridges)
+library(ggplot2)
+library(tidyr)
+library(ggthemes)
+library(clhs)
+library(doParallel)
+library(caret)
+library(randomForest)
+library(pls)
+library(devtools)
 print("Packages loaded!")
 
 
