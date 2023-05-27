@@ -9,14 +9,14 @@ In this repository I bring my own R script for prediction of soil elemental conc
 ```
 The script implements the modeling procedure in the following steps:
 
-1. Importing and loading required packages
-2. Declaring functions and fonts to be used
-3. Importing the dataset and defining the variables
-4. Cleaning and filtering the dataset
-5. Splitting the dataset into calibration and validation sets
-6. Preprocessing spectra using five different methods (Savitzky-Golay derivative, Standard Normal Variate, Multiplicative Scatter Correction, Detrend Normalization, and Continuum Removal) 
-7. Modeling and prediction procedures condensed in a FOR loop for each individual element in the dataset
-8. Combining the results in csv tables
+1. Loading required packages
+2. Declaring functions
+3. Importing the dataset
+4. Cleaning and filtering data
+5. Splitting the dataset into calibration and validation sample sets
+6. Preprocessing spectra using five different methods: Savitzky-Golay derivative, Standard Normal Variate, Multiplicative Scatter Correction, Detrend Normalization, and Continuum Removal
+7. Modeling Random Forest Regression predictions in a 'for' loop for each element in the dataset
+8. Combining the results and exporting in csv tables
 ```
 
 The outputs of the script are tables of calibration results and validation results for each individual prediction and two tables containing all of the calibration and validation results for all predictions, figures of the predicted versus observed values, and figures of the variables' importance in the prediction.
